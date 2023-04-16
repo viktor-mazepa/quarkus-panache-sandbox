@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  vintagestore_database:
+    image: "postgres:14"
+    container_name: "vintagestore_database"
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=vintagepwd
+      - POSTGRES_USER=vintageuser
+      - POSTGRES_DB=vintagestore_database
+      - PGDATA=/var/lib/postgresql/data
+

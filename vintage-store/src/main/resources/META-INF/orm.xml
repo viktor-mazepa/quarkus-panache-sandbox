@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" version="1.0">
+    <entity class="com.mazasoft.quarkus.jdbc.model.Artist">
+        <table name="t_artists"/>
+        <attributes>
+            <id name="id">
+                <generated-value strategy="AUTO"/>
+            </id>
+            <basic name="name">
+                <column length="200" nullable="false"/>
+            </basic>
+            <basic name="bio">
+                <column length="3000" nullable="false"/>
+            </basic>
+            <basic name="createdDate">
+                <column name="created_date" nullable="false"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>
